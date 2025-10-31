@@ -1,0 +1,110 @@
+/* styles.css */
+body {
+  margin: 0;
+  background-color: #06061a;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* Fondo animado sutil */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Tooltip */
+.tooltip {
+  background: rgba(20, 20, 40, 0.7);
+  padding: 10px 15px;
+  color: white;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Botón Volver */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(15, 15, 25, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  z-index: 10;
+  /* ✅ siempre encima del Canvas */
+}
+
+.back-button:hover {
+  background: rgba(0, 255, 255, 0.3);
+  color: #00ffff;
+}
+
+/* Selector de proyección (PCA / UMAP) */
+.projection-selector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+  /* ✅ evita bloqueo por el Canvas */
+}
+
+.projection-selector button {
+  background: linear-gradient(135deg, #0f1b2e, #192d4e);
+  color: #ffffff;
+  border: 1px solid #00ffff55;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  transition: all 0.25s ease;
+}
+
+.projection-selector button:hover {
+  background: rgba(0, 255, 255, 0.25);
+  color: #00ffff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.projection-selector .active {
+  background: rgba(0, 255, 255, 0.6);
+  color: black;
+  font-weight: bold;
+  border-color: #00ffffaa;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+}
+
+.genre-label {
+  background: rgba(0, 255, 255, 0.15);
+  color: #00ffff;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  transform: translateY(-5px);
+  transition: all 0.2s ease;
+}
